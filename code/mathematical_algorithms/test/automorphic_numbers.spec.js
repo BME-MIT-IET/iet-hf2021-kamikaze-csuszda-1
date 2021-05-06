@@ -20,14 +20,6 @@ test('Returns false for automorphic looking double 2.1', () => {
     expect(automorphic(2.1)).toBe(false);
 });
 
-test('Returns false for automorphic looking double 1.0', () => {
-    expect(automorphic(1.0)).toBe(false);
-});
-
 test('Returns false non automorphic looking double 2.0', () => {
     expect(automorphic(2.0)).toBe(false);
-});
-
-test('Returns false for for automorphic looking double 0.0', () => {
-    expect(automorphic(0.0)).toBe(false);
 });
