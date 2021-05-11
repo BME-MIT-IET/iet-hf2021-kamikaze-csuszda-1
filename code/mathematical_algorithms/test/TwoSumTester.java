@@ -2,8 +2,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class TwoSumTester {
-    two_sum tesztalany = new two_sum();
-
     public void MonkeyTest() {
         System.out.println("Monkey test:");
         int[] monkeyArray;
@@ -33,7 +31,7 @@ public class TwoSumTester {
     public void BlckBxArrayParamNull() {
         System.out.println("Black Box: Array is null");
         int[] blckBxArray = null;
-        int blckBxTarget = 0;
+        int blckBxTarget = 2;
         System.out.println("Target: " + blckBxTarget);
 
         try {
@@ -72,7 +70,7 @@ public class TwoSumTester {
     public void BlckBxUnfilledArray() {
         System.out.println("Black Box: Array is unfilled");
         int[] blckBxArray = new int[10];
-        int blckBxTarget = 0;
+        int blckBxTarget = 2;
         System.out.println("Target: " + blckBxTarget);
 
         try {
