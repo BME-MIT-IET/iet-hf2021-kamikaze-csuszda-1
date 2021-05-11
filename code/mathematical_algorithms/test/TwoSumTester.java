@@ -10,7 +10,7 @@ public class TwoSumTester {
         int monkeyInt;
 
         Random leRandom = new Random();
-        int randomNum = leRandom.nextInt(1000000000);
+        int randomNum = leRandom.nextInt(1000000);
 
         monkeyArray = new int[randomNum];
         System.out.println("Size of the Monkey Array:");
@@ -34,6 +34,7 @@ public class TwoSumTester {
         System.out.println("Black Box: Array is null");
         int[] blckBxArray = null;
         int blckBxTarget = 0;
+        System.out.println("Target: " + blckBxTarget);
 
         try {
             System.out.println(Arrays.toString(two_sum.two_sum(blckBxArray, blckBxTarget)));
@@ -46,6 +47,7 @@ public class TwoSumTester {
         System.out.println("Black Box: Array is all positive, target negative");
         int[] blckBxArray = {5, 8, 97, 2, 34, 38};
         int blckBxTarget = -8;
+        System.out.println("Target: " + blckBxTarget);
 
         try {
             System.out.println(Arrays.toString(two_sum.two_sum(blckBxArray, blckBxTarget)));
@@ -58,6 +60,7 @@ public class TwoSumTester {
         System.out.println("Black Box: Array is all negative, target is positive");
         int[] blckBxArray = {-5, -8, -97, -2, -34, -38};
         int blckBxTarget = 66;
+        System.out.println("Target: " + blckBxTarget);
 
         try {
             System.out.println(Arrays.toString(two_sum.two_sum(blckBxArray, blckBxTarget)));
@@ -70,6 +73,7 @@ public class TwoSumTester {
         System.out.println("Black Box: Array is unfilled");
         int[] blckBxArray = new int[10];
         int blckBxTarget = 0;
+        System.out.println("Target: " + blckBxTarget);
 
         try {
             System.out.println(Arrays.toString(two_sum.two_sum(blckBxArray, blckBxTarget)));
