@@ -22,5 +22,11 @@ A tesztek között található olyan is, aminek a célja, hogy a függvények he
 ### CountDigits tesztek
 ![](CountDigitsTestResult1.PNG)
 ![](CountDigitsTestResult2.PNG)
-- A Monkey teszt kiértékelése ebben az esetben kézzel szinte lehetetlen ennyi output mellett. Szúrópróba szerűen az értékek helyesek, de nincs kizárva, hogy valamelyik hibás legyen. A manuális tesztelés egyik hátránya. 
+- A Monkey teszt kiértékelése ebben az esetben kézzel szinte lehetetlen ennyi output mellett. Szúrópróba szerűen az értékek helyesek, de nincs kizárva, hogy valamelyik hibás legyen. A manuális tesztelés egyik hátránya.
+- A második tesztünk eredménye egy elkapott Nullpointer Exception. Ennek tanulsága, hogy a függvény írója nem számított erre az eshetőségre és nincs a paraméteren null check. Bár azoknak az eseteknek a száma, ahol ez egyáltalán előfordulhat nem túl magas, mégis érdemes lehet javítani, vagy ha nincs hozzáférésünk a kódhoz, magunk elvégezni a vizsgálatot a függvényhívás előtt. 
 - A többi teszt eredménye alapján a függvény elvárásoknak megfelelően működik
+
+## ÖSszefoglalás
+Úgy érzem egy függvénykönyvtár esetében a manuális, minden további segédeszköz nélküli Black Box/Monkey tesztelés elég limitált lehetőségeket biztosít komoly hibák megtalálására többek között a lehetséges szándékosan létrehozott hibás inputok létrehozásának nehézsége és a forráskód nem ismerete miatt. Ez a megközelítés hasznosabbnak tűnik a függvénykönyvtár felhasználás előtti megismerésére, határainak és limitációinak megtalálására.
+
+Emellett természetesen első vonalas tesztelésnek tökéletesen megfelel, hiszen egy tapasztalt programozó könnyedén ír olyan teszteseteket, amik a mindennapi használat többségét lefedik és ezzel a potenciális leggyakrabban előforduló hibák kiszűrhetőek. Bármilyen ennél mélyebben ható tesztelésre ezt a módszert ilyen környezetben nem használnám. 
