@@ -15,3 +15,7 @@ test('Positive Floating point', () => {
 test('Negative Floating point', () => {
     expect(greatestDigit(-0.12)).toBe(2);
 });
+
+test('Invalid input', () => {
+    expect(greatestDigit()).toBe(undefined);
+});

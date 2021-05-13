@@ -15,3 +15,7 @@ test('Positive Floating point', () => {
 test('Negative Floating point', () => {
     expect(smallest_digit_in_number(-89.98)).toBe(8);
 });
+
+test('Invalid input', () => {
+    expect(smallest_digit_in_number()).toBe(undefined);
+});
