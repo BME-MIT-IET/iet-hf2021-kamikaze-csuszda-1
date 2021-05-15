@@ -31,3 +31,17 @@ Negatív számok esetén nem ír ki rossz eredményt, azonban félrevezethetően
 ### Teljesítmény
 
 Egy algoritmus teljesítményének mérésére a legjobb adat az algoritmus futásideje. A futásidő méréséhez a különböző bemeneti értékekre vizsgáltam az algoritmust. Az algoritmus minden értékre nagyon gyorsan lefutott, még nagyon nagy prímek szorzatára is. Mivel itt csak az eltelt időt vizsgáltam, a faktorizáció eredményét nem, kíváncsiságból ellenőriztem a korábbi használhatóság teszttel, hogy hogyan lehetséges, hogy kevesebb, mint 1 ms alatt lefut az algoritmus. Kiderült, hogy nagyon nagy számoknál az algoritmus már nem működik helyesen (két nagy prím szorzatára a bemeneti számot jelzi, vagy pedig rossz prímtényezőket sorol fel). A hibát azonban nem találtam meg benne az algoritmusban, a hibafeltételezhetően az integer nagyságának nem megfelelő kezeléséből adódott. Ez biztonsági problémákat is felvethet.
+
+
+## Jelszó erősség vizsgáló
+### Használhatóság
+
+A használhatóság ellenőrzésére pár gyakori jelszót vizsgáltam.
+A probléma megoldásához felhasználtam a könyvtár által tartalmazott példakódot, ezt kisebb módosításokkal át lehetett alakítani úgy, hogy a számomra kívánt eredményt adja.
+A teszt eredménye alapján megállaptottam, hogy az algoritmus jól felhasználható.
+
+### Teljesítmény
+
+Egy algoritmus teljesítményének mérésére a legjobb adat az algoritmus futásideje. A futásidő méréséhez a különböző hosszúságú bemeneti értékekre vizsgáltam az algoritmust. Az algoritmus minden értékre nagyon gyorsan lefutott. Látványos növekedés csupán irreálisan nagy bemenetek esetén figyelhető meg. Vagyis az algoritmus a gyakorlatban nagyon hatékony.
+
+![](pwcheckerperformance.png)
