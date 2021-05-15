@@ -1,3 +1,5 @@
+import java.security.InvalidAlgorithmParameterException;
+import java.util.Queue;
 import java.util.Scanner;
 /*
  *	Part of Cosmos by OpenGenus Foundation
@@ -52,7 +54,8 @@ import java.util.Scanner;
 		return true;
 	}
 
-	public static void initField(int queens) {
+	public static void initField(int queens) throws InvalidAlgorithmParameterException {
+		if(queens < 0) throw new InvalidAlgorithmParameterException("Number of queens cannot be negative");
 		array = new int[queens][queens];
 		for (int i=0;i < queens ; i++) {
 			for (int j = 0;j < queens ; j++)
@@ -64,7 +67,12 @@ import java.util.Scanner;
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Type in the number of queens: ");
 		int queens = sc.nextInt();
-		initField(queens);
+		try {
+			initField(queens);
+		} catch (InvalidAlgorithmParameterException e) {
+			System.out.println(e.getMessage());
+		}
+
 		if(!solveNQueen(queens, 0))
 			System.out.println("No combination possible!");
 		else
