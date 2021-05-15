@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class NQueenTest {
     public static void main(String[] args) throws InvalidAlgorithmParameterException {
-        UsabilityTest();
+        //UsabilityTest();
+        PerformaceTest();
     }
 
     public static void UsabilityTest() throws InvalidAlgorithmParameterException {
@@ -21,4 +22,23 @@ public class NQueenTest {
 
     }
 
+    public static void PerformaceTest() {
+        long timeBeforeTest;
+        for(int i = 0; i < 50; i++) {
+            timeBeforeTest = System.currentTimeMillis();
+            try {
+                NQueen.initField(i);
+                NQueen.solveNQueen(i, 0);
+                long timeAfterTest = System.currentTimeMillis();
+                long time = timeAfterTest - timeBeforeTest;
+                System.out.println(i + ": " + time);
+            } catch(Exception e) {
+                continue;
+            }
+        }
+    }
+
+    public static void StressTest() {
+        
+    }
 }
