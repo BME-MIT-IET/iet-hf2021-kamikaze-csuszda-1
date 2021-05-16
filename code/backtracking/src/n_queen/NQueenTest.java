@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class NQueenTest {
     public static void main(String[] args) throws InvalidAlgorithmParameterException {
         //UsabilityTest();
-        PerformaceTest();
+        //PerformaceTest();
+        StressTest();
     }
 
     public static void UsabilityTest() throws InvalidAlgorithmParameterException {
@@ -39,6 +40,22 @@ public class NQueenTest {
     }
 
     public static void StressTest() {
-        
+        for(int i = 0; i < 50; i++) {
+            long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+            try {
+                System.gc();
+                //Runtime rt = Runtime.getRuntime();
+
+                NQueen.initField(i);
+                NQueen.solveNQueen(i, 0);
+                long afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+                long actualMemUsed=afterUsedMem-beforeUsedMem;
+                System.out.println(i + ": " + actualMemUsed);
+                //long usedMB = (rt.totalMemory() - rt.freeMemory()) / 1024 / 1024;
+                //System.out.println( "memory usage" + usedMB);
+            } catch(Exception e) {
+                continue;
+            }
+        }
     }
 }
