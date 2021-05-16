@@ -3,3 +3,5 @@
 .DS_Store
 .replit
 node_modules
+.idea
+/target
