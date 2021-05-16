@@ -20,6 +20,12 @@ Egy algoritmus teljesítményének mérésére a legjobb adat az algoritmus fut�
 ![](nqueenperformancetime.png)
 
 
+### Stressz teszt
+
+CPU és memória használatból is megfigyelhető, hogy az algoritmus futásánál nem a számítógép kapacitása a probléma, hanem a szűkös idő.
+
+![](nqueenstresscpuandheap.png)
+
 ## Prím faktorizáció
 ### Használhatóság
 
