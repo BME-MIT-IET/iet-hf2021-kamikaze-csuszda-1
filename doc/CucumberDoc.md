@@ -1,7 +1,7 @@
 # BDD - Cucumber dokumentáció
 
 ## Eszköz feltérképezése
-A Behaviour Driven Testing egy rendkívül érdekes koncepció, melynek bővebben utánaolvasva tudtam, hogy ezt ki akarom próbálni.
+A Behaviour Driven Development egy rendkívül érdekes koncepció, melynek bővebben utánaolvasva tudtam, hogy ezt ki akarom próbálni.
 A Cucumber pedig egyből megtetszett, a Gherkin szintaxis remekül olvasható, és könnyen elsajátítható.
 
 ## Cucumber és a projekt összehangolása
