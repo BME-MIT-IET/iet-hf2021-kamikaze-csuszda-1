@@ -3,13 +3,15 @@
 public class LinearRegression { 
 
     public static void main(String[] args) { 
-        int MAXN = 1000;
+        int maxn = 1000;
         int n = 0;
-        double[] x = new double[MAXN];
-        double[] y = new double[MAXN];
+        double[] x = new double[maxn];
+        double[] y = new double[maxn];
 
         // first pass: read in data, compute xbar and ybar
-        double sumx = 0.0, sumy = 0.0, sumx2 = 0.0;
+        double sumx = 0.0;
+        double sumy = 0.0;
+        double sumx2 = 0.0;
         while(!StdIn.isEmpty()) {
             x[n] = StdIn.readDouble();
             y[n] = StdIn.readDouble();
@@ -22,7 +24,9 @@ public class LinearRegression {
         double ybar = sumy / n;
 
         // second pass: compute summary statistics
-        double xxbar = 0.0, yybar = 0.0, xybar = 0.0;
+        double xxbar = 0.0;
+        double yybar = 0.0;
+        double xybar = 0.0;
         for (int i = 0; i < n; i++) {
             xxbar += (x[i] - xbar) * (x[i] - xbar);
             yybar += (y[i] - ybar) * (y[i] - ybar);

@@ -1,6 +1,3 @@
-import java.io.*;
-import java.lang.*;
-import java.math.*;
 import java.util.*;
 
 class PowerOf2{

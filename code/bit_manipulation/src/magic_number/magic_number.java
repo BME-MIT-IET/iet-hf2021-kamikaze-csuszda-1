@@ -7,7 +7,6 @@
 ** @GITHUB LINK: https://github.com/vinayb21
 */
 
-import java.util.*;
 import java.io.*;
 
 class MagicNumber {

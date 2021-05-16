@@ -56,7 +56,9 @@ public class LangtonAnt {
 	    try {
 		Thread.sleep(10);
 	    } catch (InterruptedException e) {
-		e.printStackTrace();
+			System.out.println("Interrupted! " + e);
+			e.printStackTrace();
+			Thread.currentThread().interrupt();
 	    }
 	    frame.repaint();
 	}

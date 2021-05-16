@@ -35,7 +35,8 @@ import java.util.Scanner;
 				return false;
 		}
 	 
-		int copyRow = row, copyColumn = column;
+		int copyRow = row;
+		int copyColumn = column;
 		while(copyRow >= 0 && copyColumn >= 0) {
 			if(array[copyRow][copyColumn] == 1)
 				return false;
