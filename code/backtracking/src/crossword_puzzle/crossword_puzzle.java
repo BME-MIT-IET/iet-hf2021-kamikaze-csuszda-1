@@ -49,7 +49,8 @@ public class CrosswordPuzzle {
           return false;
         }
 
-        boolean isPlacedHoz = false, isPlacedVer = false;
+        boolean isPlacedHoz = false;
+        boolean isPlacedVer = false;
         while(row - 1 >= 0 && !grid[row - 1][col].equals("+")){
           row -= 1;
         }

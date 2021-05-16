@@ -36,11 +36,11 @@ class BitDivision
 
 	public static void main(String[]args)
 	{
-		Scanner scan=new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		//a -> represents divident
-		int a=scan.nextInt();
+		int a = scan.nextInt();
 		//b -> represents divisor
-		int b=scan.nextInt();
+		int b = scan.nextInt();
 		System.out.println(division(a,b));
 	}
 }

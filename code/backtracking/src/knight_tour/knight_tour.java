@@ -2,23 +2,26 @@
 import java.util.*;
  
 public class KnightsTour {
-    private final static int base = 12;
+    private final static int BASE = 12;
     private final static int[][] moves = {{1,-2},{2,-1},{2,1},{1,2},{-1,2},
         {-2,1},{-2,-1},{-1,-2}};
     private static int[][] grid;
     private static int total;
  
     public static void main(String[] args) {
-        grid = new int[base][base];
-        total = (base - 4) * (base - 4);
+        grid = new int[BASE][BASE];
+        total = (BASE - 4) * (BASE - 4);
  
-        for (int r = 0; r < base; r++)
-            for (int c = 0; c < base; c++)
-                if (r < 2 || r > base - 3 || c < 2 || c > base - 3)
+        for (int r = 0; r < BASE; r++)
+            for (int c = 0; c < BASE; c++)
+                if (r < 2 || r > BASE - 3 || c < 2 || c > BASE - 3)
                     grid[r][c] = -1;
  
-        int row = 2 + (int) (Math.random() * (base - 4));
-        int col = 2 + (int) (Math.random() * (base - 4));
+        Random r = new Random();
+        int rand1 = r.nextInt(500);
+        int rand2 = r.nextInt(500)
+        int row = 2 + (rand1 * (BASE - 4));
+        int col = 2 + (rand2 * (BASE - 4));
  
         grid[row][col] = 1;
  
